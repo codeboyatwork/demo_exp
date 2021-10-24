@@ -19,11 +19,5 @@ node('') {
 		}
 
 	    }
-	    stage('Build Project') {
-	      // build project via maven
-	      configFileProvider([configFile(fileId: '877e4e12-0ffb-40b9-9113-7b5378e29634', targetLocation: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
-	      sh "'${mvnHome}/bin/mvn' -s $MAVEN_SETTINGS clean install"
-		}
-
-	    }
+	    
 }
